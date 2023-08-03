@@ -11,10 +11,10 @@ parameters:
       - "DIV"
   numA:
     type: integer
-    description: The first number
+    description: "The first number"
   numB:
     type: integer
-    description: The second number
+    description: "The second number"
 
 docker:
   - image: cimg/base:current
@@ -23,7 +23,7 @@ steps:
   - checkout
   - when:
     condition:
-      equal: ["ADD", << parameters.func >>]
+      equal: ["ADD", <<parameters.func>>]
     steps:
       - add:
           numA: << parameters.numA >>
