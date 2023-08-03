@@ -1,10 +1,10 @@
 description: Perform a mathematical operation on two numbers and save the results.
 
 parameters:
-  func: 
+  func:
     description: The operation to on the two numbers
-    type: enum 
-    enum: 
+    type: enum
+    enum:
       - "ADD"
       - "SUB"
       - "MUL"
@@ -17,15 +17,15 @@ parameters:
     description: The second number
 
 
-docker: 
+docker:
   - image: cimg/base:current
 
-steps: 
+steps:
   - checkout
   - when:
     condition:
       equal: [ "ADD", << parameters.func >>]
     steps:
-      - add: 
+      - add:
           numA: << parameters.numA >>
-          numB: << parameters.numB >> 
+          numB: << parameters.numB >>
