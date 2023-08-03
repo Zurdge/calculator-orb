@@ -23,7 +23,7 @@ steps:
   - checkout
   - when:
     condition:
-      equal: ["ADD", <<parameters.func>>]
+      equals: ["ADD", <<parameters.func>>]
     steps:
       - add:
           numA: << parameters.numA >>
