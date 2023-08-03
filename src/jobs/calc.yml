@@ -22,9 +22,9 @@ docker:
 steps:
   - checkout
   - when:
-    condition:
-      equals: ["ADD", <<parameters.func>>]
-    steps:
-      - add:
-          numA: << parameters.numA >>
-          numB: << parameters.numB >>
+      condition:
+        equals: ["ADD", <<parameters.func>>]
+      steps:
+        - add:
+            numA: << parameters.numA >>
+            numB: << parameters.numB >>
