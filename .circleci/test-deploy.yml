@@ -31,7 +31,7 @@ jobs:
       - calculator-orb/add:
           numA: 2
           numB: 5
-      - run: 
+      - run:
           name: Verify Add Command Result is 7
           command: grep -xq 7 /tmp/ADD_RESULT.txt
 workflows:
